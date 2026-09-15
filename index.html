@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Flashcard Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>Flashcard Quiz App</h1>
+  </header>
+
+  <main class="container">
+    <section class="card-area">
+      <div class="card" id="card">
+        <div class="card-content">
+          <div class="question" id="question">Question</div>
+          <div class="answer" id="answer" aria-hidden="true">Answer</div>
+        </div>
+        <div class="card-controls">
+          <button id="toggleAnswer" class="btn primary">Show Answer</button>
+        </div>
+      </div>
+
+      <div class="nav">
+        <button id="prevBtn" class="btn" disabled>Previous</button>
+        <div class="card-counter" id="cardCounter">Card 0 of 0</div>
+        <button id="nextBtn" class="btn" disabled>Next</button>
+      </div>
+    </section>
+
+    <aside class="manage-area">
+      <h2>Add / Edit Flashcard</h2>
+      <form id="cardForm" class="card-form">
+        <label>
+          Question
+          <textarea id="qInput" required placeholder="Enter question"></textarea>
+        </label>
+        <label>
+          Answer
+          <textarea id="aInput" required placeholder="Enter answer"></textarea>
+        </label>
+        <div class="form-actions">
+          <button type="submit" id="addBtn" class="btn primary">Add Flashcard</button>
+          <button type="button" id="cancelEdit" class="btn" style="display:none">Cancel</button>
+        </div>
+      </form>
+
+      <h2>Your Flashcards</h2>
+      <ul id="cardList" class="card-list"></ul>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
